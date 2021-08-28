@@ -8,7 +8,7 @@ const Create = () => {
 	let handleSubmit = (e) => {
 		e.preventDefault();
 		let newtodo={title,body}
-		fetch("http://localhost:5000/todos", {
+		fetch("https://mern-todo-crud.herokuapp.com/todos", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json"

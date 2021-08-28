@@ -3,7 +3,7 @@ import Todo from "./Todo";
 let List = () => {
 	let [todos, setTodos] = useState([]);
 	useEffect(() => {
-		fetch("http://localhost:5000/todos").then((response) => {
+		fetch("https://mern-todo-crud.herokuapp.com/todos").then((response) => {
 			return response.json()
 		}).then((data) => {
 			console.log(data);

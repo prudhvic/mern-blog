@@ -10,7 +10,7 @@ const Edit = () => {
 	let handleSubmit = (e) => {
 		e.preventDefault();
 		let newtodo={title,body}
-		fetch(`http://localhost:5000/todos/${id}`, {
+		fetch(`https://mern-todo-crud.herokuapp.com/todos/${id}`, {
 			method: "PUT",
 			headers: {
 				"Content-Type": "application/json"
@@ -22,7 +22,7 @@ const Edit = () => {
 		
 	}
 	useEffect(() => {
-		fetch(`http://localhost:5000/todos/${id}`).then((response) => {
+		fetch(`https://mern-todo-crud.herokuapp.com/todos/${id}`).then((response) => {
 			return response.json()
 		}).then((todo) => {
 			setTitle(todo.title);

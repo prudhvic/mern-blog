@@ -7,7 +7,7 @@ const Todo = () => {
 	let history=useHistory()
 	console.log(id);
 	useEffect(() => {
-		fetch(`http://localhost:5000/todos/${id}`).then((response) => {
+		fetch(`https://mern-todo-crud.herokuapp.com/todos/${id}`).then((response) => {
 			return response.json()
 		}).then((data) => {
 			console.log(data);
@@ -16,7 +16,7 @@ const Todo = () => {
 	}, [])
 	function handledelete(e) {
 		e.preventDefault();
-		fetch(`http://localhost:5000/todos/${id}`, { method: "DELETE" });
+		fetch(`https://mern-todo-crud.herokuapp.com/todos/${id}`, { method: "DELETE" });
 		history.push("/todos")
 	}
 	
